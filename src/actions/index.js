@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import { Actions } from 'react-native-router-flux';
 import { 
 	EMAIL_CHANGED,
 	PASSWORD_CHANGED,
@@ -44,4 +45,8 @@ const loginUserSuccess = (dispatch, user) => {
 		type: LOGIN_USER_SUCCESS,
 		payload: user
 	});
+
+	// the 'key' property in our Scene component, in the Router, is equal to 'employeeList'
+	// we need to call Actions.'key_name' to navigate
+	Actions.main(); 
 };
