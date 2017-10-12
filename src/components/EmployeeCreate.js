@@ -8,7 +8,8 @@ class EmployeeCreate extends Component {
 	onButtonPress() {
 		const { name, phone, shift } = this.props;
 
-		this.props.employeeCreate({ name, phone, shift });
+		// if the shift is not set, use the default value
+		this.props.employeeCreate({ name, phone, shift: shift || 'Monday' });
 	}
 
 	render() {
