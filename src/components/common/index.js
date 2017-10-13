@@ -3,3 +3,4 @@ export * from './Card';		// using this approach, means that we cannot use the 'd
 export * from './CardSection';	//instead, we should export them as objects
 export * from './Header';
 export * from './Spinner';
+export * from './Confirm';
